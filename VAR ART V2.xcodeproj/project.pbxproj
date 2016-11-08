@@ -15,6 +15,9 @@
 		EA2377011DD18BED007F4845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2376FF1DD18BED007F4845 /* LaunchScreen.storyboard */; };
 		EA23770C1DD18BED007F4845 /* VAR_ART_V2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23770B1DD18BED007F4845 /* VAR_ART_V2Tests.m */; };
 		EA2377171DD18BED007F4845 /* VAR_ART_V2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2377161DD18BED007F4845 /* VAR_ART_V2UITests.m */; };
+		EA2377251DD18C67007F4845 /* KudanAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2377241DD18C67007F4845 /* KudanAR.framework */; };
+		EA2377281DD18C83007F4845 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2377271DD18C83007F4845 /* libc++.tbd */; };
+		EA23772A1DD19C51007F4845 /* MarkerlessTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2377291DD19C51007F4845 /* MarkerlessTrackingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		EA2377121DD18BED007F4845 /* VAR ART V2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VAR ART V2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2377161DD18BED007F4845 /* VAR_ART_V2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAR_ART_V2UITests.m; sourceTree = "<group>"; };
 		EA2377181DD18BED007F4845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2377241DD18C67007F4845 /* KudanAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KudanAR.framework; sourceTree = "<group>"; };
+		EA2377271DD18C83007F4845 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		EA2377291DD19C51007F4845 /* MarkerlessTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerlessTrackingViewController.m; sourceTree = "<group>"; };
+		EA23772B1DD19D88007F4845 /* MarkerlessTrackingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkerlessTrackingViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2377281DD18C83007F4845 /* libc++.tbd in Frameworks */,
+				EA2377251DD18C67007F4845 /* KudanAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +90,12 @@
 		EA2376E51DD18BED007F4845 = {
 			isa = PBXGroup;
 			children = (
+				EA2377241DD18C67007F4845 /* KudanAR.framework */,
 				EA2376F01DD18BED007F4845 /* VAR ART V2 */,
 				EA23770A1DD18BED007F4845 /* VAR ART V2Tests */,
 				EA2377151DD18BED007F4845 /* VAR ART V2UITests */,
 				EA2376EF1DD18BED007F4845 /* Products */,
+				EA2377261DD18C82007F4845 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +121,8 @@
 				EA2376FF1DD18BED007F4845 /* LaunchScreen.storyboard */,
 				EA2377021DD18BED007F4845 /* Info.plist */,
 				EA2376F11DD18BED007F4845 /* Supporting Files */,
+				EA2377291DD19C51007F4845 /* MarkerlessTrackingViewController.m */,
+				EA23772B1DD19D88007F4845 /* MarkerlessTrackingViewController.h */,
 			);
 			path = "VAR ART V2";
 			sourceTree = "<group>";
@@ -138,6 +151,14 @@
 				EA2377181DD18BED007F4845 /* Info.plist */,
 			);
 			path = "VAR ART V2UITests";
+			sourceTree = "<group>";
+		};
+		EA2377261DD18C82007F4845 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA2377271DD18C83007F4845 /* libc++.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA23772A1DD19C51007F4845 /* MarkerlessTrackingViewController.m in Sources */,
 				EA2376F91DD18BED007F4845 /* ViewController.m in Sources */,
 				EA2376F61DD18BED007F4845 /* AppDelegate.m in Sources */,
 				EA2376F31DD18BED007F4845 /* main.m in Sources */,
@@ -428,9 +450,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6YJMXB2FR4;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "VAR ART V2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "eu.kudan.ar.VAR-ART-V2";
+				PRODUCT_BUNDLE_IDENTIFIER = eu.kudan.ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -440,9 +467,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6YJMXB2FR4;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "VAR ART V2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "eu.kudan.ar.VAR-ART-V2";
+				PRODUCT_BUNDLE_IDENTIFIER = eu.kudan.ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <KudanAR/ARAPIKey.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[ARAPIKey sharedInstance] setAPIKey:@"GAWQE-F9AQU-2G87F-8HKED-Q7BTG-TY29G-RV85A-XN3ZP-A9KGM-E8LB6-VC2XW-VTKAK-ANJLG-2P8NX-UZMAH-Q"];
     return YES;
 }
 
