@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "MarkerlessTrackingViewController.h"
 #import "InstructionLabel.h"
-//need to add instruction label
 
 typedef NS_ENUM(NSInteger, ArbiTrackState) {
     ARBI_Placement,
@@ -47,12 +46,12 @@ typedef NS_ENUM(NSInteger, ArbiTrackState) {
 //we need to compartmentalize this to each art piece
 - (void)setupModel {
     //need to add the model to the string
-    ARModelImporter *importer = [[ARModelImporter alloc] initWithBundled:@"X.armodel"];
+    ARModelImporter *importer = [[ARModelImporter alloc] initWithBundled:@"bloodhound.armodel"];
     ARModelNode *modelNode = [importer getNode];
     
     //need to add the image
     ARLightMaterial *material = [ARLightMaterial new];
-    material.colour.texture = [[ARTexture alloc] initWithUIImage:[UIImage imageNamed:@"image.png"]];
+    material.colour.texture = [[ARTexture alloc] initWithUIImage:[UIImage imageNamed:@"bloodhound.png"]];
     material.diffuse.value = [ARVector3 vectorWithValuesX:0.2 y:0.2 z:0.2];
     material.ambient.value = [ARVector3 vectorWithValuesX:0.8 y:0.8 z:0.8];
     material.specular.value = [ARVector3 vectorWithValuesX:0.3 y:0.3 z:0.3];
@@ -90,10 +89,10 @@ typedef NS_ENUM(NSInteger, ArbiTrackState) {
 
 - (void)setupLabel {
     dispatch_async(dispatch_get_main_queue(), ^{
-        instructionLabel *label = [[InstructionLabel alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+        InstructionLabel *label = [[InstructionLabel alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
         label.text = @"Tap screen to place model";
         [self.view addSubview:label];
-        [label constrainInview:self.view];
+        [label constrainInView:self.view];
         self.label = label;
     });
 }
@@ -135,8 +134,8 @@ typedef NS_ENUM(NSInteger, ArbiTrackState) {
     }
     float diff = panLocation - _lastPanX;
     float deg = diff * 0.5;
-    @synchronized ([ARRenderer getInsance]) {
-        [self._modelNode rotateByDegrees:deg axisX:0 y:1 z:0];
+    @synchronized ([ARRenderer getInstance]) {
+        [self.modelNode rotateByDegrees:deg axisX:0 y:1 z:0];
     }
     _lastPanX = panLocation;
 }
