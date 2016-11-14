@@ -93,7 +93,7 @@ typedef NS_ENUM(NSInteger, ArbiTrackState) {
         label.text = @"Tap screen to place model";
         [self.view addSubview:label];
         [label constrainInView:self.view];
-        self.label = label;
+        self.Label = label;
     });
 }
 
@@ -104,13 +104,13 @@ typedef NS_ENUM(NSInteger, ArbiTrackState) {
         arbiTrack.targetNode.visible = NO;
         self.modelNode.scale = [ARVector3 vectorWithValuesX:1 y:1 z:1];
         _arbitButtonState = ARBI_Tracking;
-        self.label.text = @"Pinch and pan to scale/rotate";
+        self.Label.text = @"Pinch and pan to scale/rotate";
         return;
     } else if (_arbitButtonState == ARBI_Tracking) {
         [arbiTrack stop];
         arbiTrack.targetNode.visible = YES;
         _arbitButtonState = ARBI_Placement;
-        self.label.text = @"Tap the screen to place the model";
+        self.Label.text = @"Tap the screen to place the model";
         return;
     }
 }

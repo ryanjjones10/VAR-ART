@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EA2376F31DD18BED007F4845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2376F21DD18BED007F4845 /* main.m */; };
 		EA2376F61DD18BED007F4845 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2376F51DD18BED007F4845 /* AppDelegate.m */; };
-		EA2376F91DD18BED007F4845 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2376F81DD18BED007F4845 /* ViewController.m */; };
 		EA2376FC1DD18BED007F4845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2376FA1DD18BED007F4845 /* Main.storyboard */; };
 		EA2376FE1DD18BED007F4845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2376FD1DD18BED007F4845 /* Assets.xcassets */; };
 		EA2377011DD18BED007F4845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2376FF1DD18BED007F4845 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,10 @@
 		EA2377281DD18C83007F4845 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2377271DD18C83007F4845 /* libc++.tbd */; };
 		EA23772A1DD19C51007F4845 /* MarkerlessTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2377291DD19C51007F4845 /* MarkerlessTrackingViewController.m */; };
 		EAB096B61DD913690071F8BD /* InstructionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB096B51DD913690071F8BD /* InstructionLabel.m */; };
+		EAB096B91DD933950071F8BD /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB096B81DD933950071F8BD /* target.png */; };
+		EAB096BC1DD935C10071F8BD /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB096BB1DD935C10071F8BD /* TitleViewController.m */; };
+		EAB096FB1DD93A230071F8BD /* bloodhound.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB096F91DD93A230071F8BD /* bloodhound.png */; };
+		EAB096FC1DD93A230071F8BD /* bloodhound.armodel in Resources */ = {isa = PBXBuildFile; fileRef = EAB096FA1DD93A230071F8BD /* bloodhound.armodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +46,6 @@
 		EA2376F21DD18BED007F4845 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA2376F41DD18BED007F4845 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA2376F51DD18BED007F4845 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA2376F71DD18BED007F4845 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EA2376F81DD18BED007F4845 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EA2376FB1DD18BED007F4845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA2376FD1DD18BED007F4845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA2377001DD18BED007F4845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +62,11 @@
 		EA23772B1DD19D88007F4845 /* MarkerlessTrackingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkerlessTrackingViewController.h; sourceTree = "<group>"; };
 		EAB096B51DD913690071F8BD /* InstructionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionLabel.m; sourceTree = "<group>"; };
 		EAB096B71DD9138E0071F8BD /* InstructionLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionLabel.h; sourceTree = "<group>"; };
+		EAB096B81DD933950071F8BD /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = ../../../../Desktop/target.png; sourceTree = "<group>"; };
+		EAB096BA1DD935190071F8BD /* TitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		EAB096BB1DD935C10071F8BD /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
+		EAB096F91DD93A230071F8BD /* bloodhound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bloodhound.png; sourceTree = "<group>"; };
+		EAB096FA1DD93A230071F8BD /* bloodhound.armodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = bloodhound.armodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,19 +121,22 @@
 		EA2376F01DD18BED007F4845 /* VAR ART V2 */ = {
 			isa = PBXGroup;
 			children = (
+				EAB096B81DD933950071F8BD /* target.png */,
 				EA2376F41DD18BED007F4845 /* AppDelegate.h */,
 				EA2376F51DD18BED007F4845 /* AppDelegate.m */,
-				EA2376F71DD18BED007F4845 /* ViewController.h */,
-				EA2376F81DD18BED007F4845 /* ViewController.m */,
 				EA2376FA1DD18BED007F4845 /* Main.storyboard */,
 				EA2376FD1DD18BED007F4845 /* Assets.xcassets */,
 				EA2376FF1DD18BED007F4845 /* LaunchScreen.storyboard */,
 				EA2377021DD18BED007F4845 /* Info.plist */,
+				EAB096F91DD93A230071F8BD /* bloodhound.png */,
+				EAB096FA1DD93A230071F8BD /* bloodhound.armodel */,
 				EA2376F11DD18BED007F4845 /* Supporting Files */,
 				EA2377291DD19C51007F4845 /* MarkerlessTrackingViewController.m */,
 				EA23772B1DD19D88007F4845 /* MarkerlessTrackingViewController.h */,
 				EAB096B51DD913690071F8BD /* InstructionLabel.m */,
 				EAB096B71DD9138E0071F8BD /* InstructionLabel.h */,
+				EAB096BA1DD935190071F8BD /* TitleViewController.h */,
+				EAB096BB1DD935C10071F8BD /* TitleViewController.m */,
 			);
 			path = "VAR ART V2";
 			sourceTree = "<group>";
@@ -275,8 +284,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB096B91DD933950071F8BD /* target.png in Resources */,
+				EAB096FB1DD93A230071F8BD /* bloodhound.png in Resources */,
 				EA2377011DD18BED007F4845 /* LaunchScreen.storyboard in Resources */,
 				EA2376FE1DD18BED007F4845 /* Assets.xcassets in Resources */,
+				EAB096FC1DD93A230071F8BD /* bloodhound.armodel in Resources */,
 				EA2376FC1DD18BED007F4845 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA23772A1DD19C51007F4845 /* MarkerlessTrackingViewController.m in Sources */,
-				EA2376F91DD18BED007F4845 /* ViewController.m in Sources */,
+				EAB096BC1DD935C10071F8BD /* TitleViewController.m in Sources */,
 				EA2376F61DD18BED007F4845 /* AppDelegate.m in Sources */,
 				EAB096B61DD913690071F8BD /* InstructionLabel.m in Sources */,
 				EA2376F31DD18BED007F4845 /* main.m in Sources */,
